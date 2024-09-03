@@ -1,0 +1,29 @@
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-gap: 24px;
+}
+
+.articles div:first-child {
+  display: none;
+}
+
+.article-item h3 {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.article-item a:hover {
+  text-decoration: none;
+}
+
+.article-item p {
+  font-size: 14px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

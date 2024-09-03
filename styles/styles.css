@@ -1,24 +1,26 @@
 /*
  * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License")
  * you may not use this file except in compliance with the License. You may obtain a copy
  * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
+
  * Unless required by applicable law or agreed to in writing, software distributed under
  * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
+  --text-color: #202020;
+  --link-color: #ffea00;
+  --link-hover-color: #ffea00;
+  --footer-bg-color: #202020;
+  --footer-text-color: #ebebeb;
+  
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -37,7 +39,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 /* fallback fonts */
@@ -53,7 +55,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -85,7 +87,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: 126px;
 }
 
 header .header,
@@ -112,12 +114,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +161,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -173,8 +192,8 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border-radius: 0;
+  padding: 1em 2.4em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
@@ -182,11 +201,13 @@ button {
   text-align: center;
   text-decoration: none;
   background-color: var(--link-color);
-  color: var(--background-color);
+  color: var(--text-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: uppercase;
   white-space: nowrap;
+  font-size: 14px;
 }
 
 a.button:hover,
@@ -228,24 +249,57 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+.magazine>div {
+  gap: 0;
+  background: #ebebeb;
+}
+
+main>.section .magazine {
+  padding: 40px 0;
+}
+
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
+main>.section:first-of-type {
+  margin-top:120px;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+@media (width >=900px) {
+  main>.section>div {
+  padding: 2px 0 0 54px;
   }
+}
+
+.magazine .columns-img-col {
+  flex: 1.7;
+  padding: 0;
+}
+
+.about-info h2 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top:27px;
+}
+
+.about-info h2::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: var(--link-color);
+  display: block;
+  margin: 20px 0 0;
+}
+
+.about-info p {
+  font-size: 14px;
 }
 
 /* section metadata */
@@ -254,4 +308,8 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.columns-container{
+  margin-top: -42px ;
 }
