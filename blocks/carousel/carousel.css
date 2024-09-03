@@ -94,14 +94,8 @@
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--text-grey-color);
+  background-color: darkgrey; 
   transition: background-color 0.2s;
-}
-
-.carousel .carousel-slide-indicator button:disabled,
-.carousel .carousel-slide-indicator button:hover,
-.carousel .carousel-slide-indicator button:focus-visible {
-  background-color: var(--text-color);
 }
 
 .carousel .carousel-navigation-buttons {
@@ -114,7 +108,6 @@
   z-index: 1;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-navigation-buttons button {
   position: relative;
   width: 40px;
@@ -160,6 +153,15 @@
 .carousel .carousel-navigation-buttons button.slide-next::after {
   transform: translate(-50%, -50%) rotate(45deg);
   left: calc(50% - 2px);
+}
+
+.carousel .carousel-slide-indicator button:hover,
+.carousel .carousel-slide-indicator button:focus-visible {
+  background-color: grey; /* Hover/focus color */
+}
+
+.carousel .carousel-slide-indicator button:disabled {
+  background-color: black; 
 }
 
 @media (width >= 600px) {
