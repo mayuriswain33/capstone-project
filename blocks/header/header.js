@@ -97,6 +97,23 @@ export default async function decorate(block) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
   }
+  // search  functionality start
+  const search = nav.querySelector('.nav-tools p');
+  if (search) {
+    const searchForm = document.createElement('form');
+    searchForm.action = 'https://www.google.com/search';
+    searchForm.method = 'GET';
+    searchForm.target = '_blank';
+    // Create search input element
+    const searchInput = document.createElement('input');
+    searchInput.type = 'search';
+    searchInput.className = 'search-field';
+    searchInput.name = 'q';
+    searchInput.placeholder = 'SEARCH';
+    searchForm.appendChild(searchInput);
+    search.appendChild(searchForm);
+  }
+  // search  functionality  end
 
   const navSections = nav.querySelector('.nav-sections');
   const navLinks = navSections.querySelectorAll('a');
