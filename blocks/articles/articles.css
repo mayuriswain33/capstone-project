@@ -10,9 +10,10 @@
 
 .article-item h3 {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-color);
   text-transform: uppercase;
+  margin: 10px 0;
 }
 
 .article-item a:hover {
@@ -20,10 +21,19 @@
 }
 
 .article-item p {
-  font-size: 14px;
+  font-size: 14px; 
   color: var(--text-color);
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin-top: 8px;
 }
+
+.article-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+

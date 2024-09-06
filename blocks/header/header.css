@@ -165,6 +165,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
     justify-content: flex-end;
     padding: 0 5em;
     border-top-left-radius: 8px;
+    min-height: 0;
   }
 
   header nav {
@@ -325,7 +326,7 @@ header nav .nav-tools {
 
 /* Scroll-shadow effect */
 .scroll-shadow nav {
-  height: 70px;
+  height:79px;
 }
 
 .scroll-shadow {
@@ -358,4 +359,19 @@ header nav .nav-tools {
   left: 10px; 
   top: 50%; 
   transform: translateY(-50%) scaleX(-1); 
+}
+
+@media (width >= 600px) {
+  header nav[aria-expanded='true'] {
+    gap: 0 24px;
+  }
+
+  header nav .nav-brand img {
+    width: 128px;
+  }
+
+  .header nav .nav-tools {
+    grid-area: tools;
+    position: relative;
+  }
 }
