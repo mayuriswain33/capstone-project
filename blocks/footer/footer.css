@@ -7,7 +7,7 @@ footer {
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 16px 24px;
 }
 
 footer .footer p {
@@ -23,6 +23,7 @@ footer .footer a {
 
 footer .footer-top div {
   display: flex;
+  flex-wrap: wrap; 
 }
 
 footer .footer-top img {
@@ -35,6 +36,7 @@ footer .footer-top ul {
   align-items: center;
   margin: 0 0 0 23px;
   list-style: none;
+  flex-wrap: wrap; 
 }
 
 footer .footer-top ul li a {
@@ -59,5 +61,34 @@ footer .footer-info {
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+
+  footer .footer-top div {
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  footer .footer-top ul {
+    margin: 0 0 0 23px; 
+    justify-content: flex-start; 
+  }
+
+  footer .footer-top ul li a {
+    padding: 10px 12px; 
+  }
+}
+
+@media (width >= 600px) {
+  footer .footer > div {
+    padding: 40px 32px 24px; 
+  }
+
+  footer .footer-top ul {
+    margin: 20px 0 0; 
+    justify-content: center; 
+  }
+
+  footer .footer-top ul li a {
+    padding: 8px 10px; 
   }
 }
